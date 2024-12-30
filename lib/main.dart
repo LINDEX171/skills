@@ -28,17 +28,34 @@ class _MyAppState extends State<MyApp> {
                 children: <Widget>[
                   Container(
                     color: Colors.red,
-                    child: Center(child: Text('Page 1', style: TextStyle(fontSize: 30))),
+                    child: Center(
+                        child: Text('Page 1', style: TextStyle(fontSize: 30))),
                   ),
                   Container(
                     color: Colors.green,
-                    child: Center(child: Text('Page 2', style: TextStyle(fontSize: 30))),
+                    child: Center(
+                        child: Text('Page 2', style: TextStyle(fontSize: 30))),
                   ),
                   Container(
                     color: Colors.blue,
-                    child: Center(child: Text('Page 3', style: TextStyle(fontSize: 30))),
+                    child: Center(
+                        child: Text('Page 3', style: TextStyle(fontSize: 30))),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SmoothPageIndicator(
+                controller: _controller, // Contrôleur de PageView
+                count: 3, // Nombre total de pages
+                effect: WormEffect(
+                  dotHeight: 10,
+                  dotWidth: 10,
+                  spacing: 16,
+                  dotColor: Colors.black,
+                  activeDotColor: Colors.blue,
+                ),
               ),
             ),
             // Ajouter SmoothPageIndicator en bas pour montrer l'indicateur de la page courante

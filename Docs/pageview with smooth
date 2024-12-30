@@ -26,3 +26,20 @@
               // Ajouter SmoothPageIndicator en bas pour montrer l'indicateur de la page courante
 
             ],
+
+4)pour les 3 points dynamics , on utilise smoothpageindicatorn
+et on passe le controller utilise au niveau de notre pageview
+ Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SmoothPageIndicator(
+                controller: _controller,  // Contrôleur de PageView
+                count: 3,  // Nombre total de pages
+                effect: WormEffect(
+                  dotHeight: 10,
+                  dotWidth: 10,
+                  spacing: 16,
+                  dotColor: Colors.black,
+                  activeDotColor: Colors.blue,
+                ),
+              ),
+            ),
