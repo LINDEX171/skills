@@ -14,11 +14,53 @@ class _MyAppState extends State<MyApp> {
   // Définir un PageController pour contrôler le PageView
   PageController _controller = PageController();
 
+  // Fonction appelée lorsqu'une option est sélectionnée dans le menu popup
+  void _onMenuOptionSelected(String value) {
+    // Gérer les actions en fonction de l'option sélectionnée
+    switch (value) {
+      case 'Option 1':
+        print('Option 1 sélectionnée');
+        break;
+      case 'Option 2':
+        print('Option 2 sélectionnée');
+        break;
+      case 'Option 3':
+        print('Option 3 sélectionnée');
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('PageView avec SmoothPageIndicator')),
+        appBar: AppBar(
+          title: Text('PageView avec SmoothPageIndicator'),
+          actions: [
+            // Ajout d'un PopupMenuButton dans l'AppBar
+            PopupMenuButton<String>(
+
+              onSelected: _onMenuOptionSelected,
+              itemBuilder: (BuildContext context) {
+                return [
+                  PopupMenuItem<String>(
+                    value: 'Option 1',
+                    child: ListTile(leading: IconButton(onPressed: () {
+                    }, icon: Icon(Icons.access_time_outlined)),title: Text("Time"), ),
+                  ),
+                  PopupMenuItem<String>(
+                    value: 'Option 2',
+                    child: Text('Option 2'),
+                  ),
+                  PopupMenuItem<String>(
+                    value: 'Option 3',
+                    child: Text('Option 3'),
+                  ),
+                ];
+              },
+            ),
+          ],
+        ),
         body: Column(
           children: [
             // Utilisation de PageView pour les pages défilables
