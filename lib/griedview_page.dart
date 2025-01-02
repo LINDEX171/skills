@@ -12,25 +12,21 @@ class _GriedviewPageState extends State<GriedviewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body:GridView.count(crossAxisCount: 2,children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(height: 50,width: 50,color: Colors.blue,),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(height: 50,width: 50,color: Colors.blue,),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(height: 50,width: 50,color: Colors.blue,),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(height: 50,width: 50,color: Colors.blue,),
-        )
-      ]),
-
+      body: GridView.builder(
+        itemCount: 10,
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.blue,
+              width: 50,
+              height: 50,
+            ),
+          );
+        },
+      ),
     );
   }
 }
