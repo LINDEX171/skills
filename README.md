@@ -1,6 +1,6 @@
 # skills
 
-A new Flutter project.
+Skiils on flutter 
 
 ## Getting Started
 
