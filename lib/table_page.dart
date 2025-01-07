@@ -13,7 +13,7 @@ class _TablePageState extends State<TablePage> {
     return Scaffold(
       body: Center(
           child: Table(
-            border: TableBorder.all(),
+        border: TableBorder.all(),
         children: [
           TableRow(children: [
             Text('Colonne 1'),
