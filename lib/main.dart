@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:skills/griedview_page.dart';
 import 'package:skills/hero_page.dart';
 import 'package:skills/stack_page.dart';
+import 'package:skills/switch_page.dart';
 import 'package:skills/tabbar_page.dart';
 import 'package:skills/table_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TabbarPage(),
+      home: SwitchPage(),
     );
   }
 }
