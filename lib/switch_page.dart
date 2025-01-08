@@ -31,7 +31,7 @@ class _CheckboxExampleState extends State<CheckboxExample> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Checkbox(
+          Switch(
             value: isChecked,
             onChanged: (bool? value) {
               setState(() {
