@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skills/card_page.dart';
 import 'package:skills/griedview_page.dart';
 import 'package:skills/hero_page.dart';
 import 'package:skills/stack_page.dart';
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SwitchPage(),
+      home: CardPage(),
     );
   }
 }
