@@ -27,14 +27,55 @@ class StepperExample extends StatefulWidget {
 }
 
 class _StepperExampleState extends State<StepperExample> {
+  int _currentStep = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stepper(steps: [
-        Step(title: Text("step1"), content: Text("information for step1",style: TextStyle(color: Colors.red),)),
-        Step(title: Text("step1"), content: Text("information for step2",style: TextStyle(color: Colors.red),)),
-        Step(title: Text("step1"), content: Text("information for step3",style: TextStyle(color: Colors.red),)),
-      ]),
+        Step(
+            isActive: _currentStep == 0,
+            title: Text("step1"),
+            content: Text(
+              "information for step1",
+              style: TextStyle(color: Colors.red),
+            )),
+        Step(
+            isActive: _currentStep == 1,
+            title: Text("step1"),
+            content: Text(
+              "information for step2",
+              style: TextStyle(color: Colors.red),
+            )),
+        Step(
+            isActive: _currentStep == 2,
+            title: Text("step1"),
+            content: Text(
+              "information for step3",
+              style: TextStyle(color: Colors.red),
+            )),
+      ],
+      onStepTapped: (value) {
+        setState(() {
+          _currentStep = value ;
+        });
+      },
+        currentStep: _currentStep,
+        onStepContinue: () {
+          if(_currentStep != 2){
+           setState(() {
+             _currentStep+=1;
+           });
+          }
+        },
+        onStepCancel: () {
+          if(_currentStep != 0){
+            setState(() {
+              _currentStep-=1;
+            });
+          }
+        },
+        type: StepperType.horizontal,
+      ),
     );
   }
 }
