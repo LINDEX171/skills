@@ -33,14 +33,14 @@ class _StepperExampleState extends State<StepperExample> {
     return Scaffold(
       body: Stepper(steps: [
         Step(
-            isActive: _currentStep == 0,
+            isActive: _currentStep >= 0,
             title: Text("step1"),
             content: Text(
               "information for step1",
               style: TextStyle(color: Colors.red),
             )),
         Step(
-            isActive: _currentStep == 1,
+            isActive: _currentStep >= 1,
             title: Text("step1"),
             content: Text(
               "information for step2",
