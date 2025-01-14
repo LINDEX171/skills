@@ -14,11 +14,10 @@ class _SpacerPageState extends State<SpacerPage> {
       appBar: AppBar(),
      body: Center(
        child: Row(children: [
-         Spacer(),
          Icon(Icons.star),
-         Spacer(),
+         Spacer(flex: 1),
          Icon(Icons.access_alarm),
-         Spacer(),
+         Spacer(flex: 2),
          Icon(Icons.accessibility_outlined),
          Spacer()
        ]),
