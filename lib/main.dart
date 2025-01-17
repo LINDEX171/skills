@@ -5,6 +5,7 @@ import 'package:skills/clipoval_page.dart';
 import 'package:skills/fractionally_page.dart';
 import 'package:skills/griedview_page.dart';
 import 'package:skills/hero_page.dart';
+import 'package:skills/layoutbuilde_page.dart';
 import 'package:skills/spacer_page.dart';
 import 'package:skills/stack_page.dart';
 import 'package:skills/stepper_page.dart';
@@ -45,7 +46,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TabbarPage(),
+      home: LayoutPage(),
     );
   }
 }
