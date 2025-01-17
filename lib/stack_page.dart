@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 class StackPage extends StatelessWidget {
   const StackPage({super.key});
 
+  //
+  // Stack en Flutter permet de superposer plusieurs widgets les uns
+  // sur les autres, de manière à ce qu'ils se trouvent les uns au-dessus'
+  // ' des autres dans l'interface.
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

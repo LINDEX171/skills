@@ -7,6 +7,10 @@ class TablePage extends StatefulWidget {
   State<TablePage> createState() => _TablePageState();
 }
 
+// Le widget Table est utile pour afficher des informations structurées
+// en grille où chaque cellule peut contenir un autre widget comme du texte,
+//     une image, ou même des boutons.
+
 class _TablePageState extends State<TablePage> {
   @override
   Widget build(BuildContext context) {

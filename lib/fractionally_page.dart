@@ -6,7 +6,10 @@ class FractionallyPage extends StatefulWidget {
   @override
   State<FractionallyPage> createState() => _FractionallyPageState();
 }
-
+//
+// Plutôt que de définir une taille absolue (comme dans width ou height),
+// FractionallySizedBox permet de spécifier la taille relative du widget
+// par rapport à l'espace disponible.
 class _FractionallyPageState extends State<FractionallyPage> {
   @override
   Widget build(BuildContext context) {

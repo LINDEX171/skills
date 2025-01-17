@@ -7,6 +7,12 @@ class AspectratioPage extends StatefulWidget {
   State<AspectratioPage> createState() => _AspectratioPageState();
 }
 
+//
+// un aspect ratio est un widget qui permet de définir un rapport fixe
+// entre la largeur et la hauteur de son enfant. Cela garantit que,
+// peu importe la taille du widget parent, l'enfant conservera toujours
+// les mêmes proportions (par exemple, 16:9 ou 1:1).
+
 class _AspectratioPageState extends State<AspectratioPage> {
   @override
   Widget build(BuildContext context) {

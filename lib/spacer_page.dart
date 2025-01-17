@@ -7,6 +7,9 @@ class SpacerPage extends StatefulWidget {
   State<SpacerPage> createState() => _SpacerPageState();
 }
 
+// le widget Spacer est un widget utilisé pour ajouter de
+// l'espace flexible entre les widgets dans un layout.
+
 class _SpacerPageState extends State<SpacerPage> {
   @override
   Widget build(BuildContext context) {

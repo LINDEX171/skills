@@ -6,6 +6,9 @@ class ClipovalPage extends StatefulWidget {
   @override
   State<ClipovalPage> createState() => _ClipovalPageState();
 }
+//
+// ClipOval en Flutter permet de découper un widget enfant en forme
+// d'ellipse ou de cercle.
 
 class _ClipovalPageState extends State<ClipovalPage> {
   @override

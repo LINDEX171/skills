@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 class CardPage extends StatelessWidget {
   const CardPage({super.key});
 
+
+  // un Card est un widget qui permet de créer une vue en forme de carte,
+  // avec un design généralement arrondi et un ombrage pour donner un effet
+  // de profondeur
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

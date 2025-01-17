@@ -7,6 +7,10 @@ class StepperPage extends StatefulWidget {
   State<StepperPage> createState() => _StepperPageState();
 }
 
+// Le widget Stepper en Flutter permet de créer une interface utilisateur
+// pour des étapes ou des étapes de processus, souvent utilisée pour guider
+// un utilisateur à travers une séquence d'actions ou de formulaires.
+
 class _StepperPageState extends State<StepperPage> {
   // int _currentStep = 0;
 

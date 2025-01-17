@@ -30,6 +30,10 @@ class _HeroPageState extends State<HeroPage> {
 class HeroDetails extends StatelessWidget {
   const HeroDetails({super.key});
 
+  //
+  // Le widget Hero utilise une clé unique (tag) pour identifier
+  // les éléments qui doivent être animés pendant la transition
+  // entre les écrans.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
