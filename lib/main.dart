@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skills/Listwheelscrollview_page.dart';
-import 'package:skills/aspectratio_page.dart';
-import 'package:skills/card_page.dart';
-import 'package:skills/clipoval_page.dart';
-import 'package:skills/fractionally_page.dart';
-import 'package:skills/griedview_page.dart';
-import 'package:skills/hero_page.dart';
-import 'package:skills/layoutbuilde_page.dart';
-import 'package:skills/spacer_page.dart';
-import 'package:skills/stack_page.dart';
-import 'package:skills/stepper_page.dart';
-import 'package:skills/switch_page.dart';
-import 'package:skills/tabbar_page.dart';
-import 'package:skills/table_page.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:skills/utils/theme/theme.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -25,29 +13,31 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // Définir un PageController pour contrôler le PageView
-  PageController _controller = PageController();
 
-  // Fonction appelée lorsqu'une option est sélectionnée dans le menu popup
-  void _onMenuOptionSelected(String value) {
-    // Gérer les actions en fonction de l'option sélectionnée
-    switch (value) {
-      case 'Option 1':
-        print('Option 1 sélectionnée');
-        break;
-      case 'Option 2':
-        print('Option 2 sélectionnée');
-        break;
-      case 'Option 3':
-        print('Option 3 sélectionnée');
-        break;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ListwheelPage(),
+      theme: TAppTheme.darkTheme,
+      home: HomeScreen(),
+    );
+  }
+}
+
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Text('Cliquez-moi !'),
+        ),
+      ),
     );
   }
 }
