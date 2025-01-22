@@ -18,7 +18,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: TAppTheme.darkTheme,
+      theme: TAppTheme.lightTeme,
+      darkTheme: TAppTheme.darkTheme,
+      themeMode: ThemeMode.system, // Change automatiquement selon le mode du système
       home: HomeScreen(),
     );
   }
