@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skills/utils/constants/colors.dart';
 
 class TAppBarTheme {
   TAppBarTheme._();
@@ -11,7 +12,7 @@ class TAppBarTheme {
     surfaceTintColor: Colors.transparent,
     iconTheme: IconThemeData(color: Colors.black, size: 24),
     actionsIconTheme: IconThemeData(color: Colors.black,size: 24),
-    titleTextStyle: TextStyle(fontSize: 18.0,fontWeight: FontWeight.w600,color: Colors.black)
+    titleTextStyle: TextStyle(fontSize: 18.0,fontWeight: FontWeight.w600,color: TColors.dark)
   );
 
   static const darkAppBarTheme = AppBarTheme(
